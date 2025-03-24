@@ -7,7 +7,7 @@ nav {
 }
 
 .presentation {
-    text-align: initial;
+    text-align: left;
 
 }
 
@@ -16,3 +16,12 @@ nav {
     text-align: center;
 }
 
+h1 {
+    text-align: center;
+}
+
+body {
+    text-align: center;
+    padding: 10px;
+    
+}
