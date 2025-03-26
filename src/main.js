@@ -1,6 +1,5 @@
 import Image from 'index.html'
 
-
 const myPresentation = document.createElement("p");
 const wifiConnect = document.createElement("p");
 
@@ -17,3 +16,7 @@ const wifi = document.querySelector("img");
 wifi.onclick = () => {
 	const src = wifi.getAttribute("src");
 };
+
+var windows = false;
+
+windows.open("https://wwww.google.com")
