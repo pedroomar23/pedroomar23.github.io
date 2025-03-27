@@ -1,5 +1,6 @@
 import Image from 'index.html'
 
+
 const myPresentation = document.createElement("p");
 const wifiConnect = document.createElement("p");
 

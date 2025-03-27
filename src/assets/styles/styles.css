@@ -8,10 +8,22 @@ nav
     text-align: center;
 }
 
+img {
+    width: 50%;
+    height: 50%;
+    border-radius: 1%;
+}
+
 .presentation 
 {
     text-align: left;
-    padding: 10px;
+    margin-top: auto;
+}
+
+.telegram 
+{
+    width: 10px;
+    height: 10px;
 }
 
 .proyectos 
@@ -26,9 +38,20 @@ h1 + h2 + h3
     margin-top: 15px;
 }
 
+.wifiConnect {
+    margin-top: 10px 10px 10px;
+    margin: 10mm 10mm 10mm;
+}
+
+.keyWifi {
+    margin-top: 60px;
+    font-size: 15px;
+}
+
 body 
 {
     text-align: center;
     font-size: 15px;
     font-family: Arial;
+    margin: 10mm 10mm 10mm;
 }
