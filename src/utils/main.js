@@ -1,6 +1,3 @@
-import Image from 'index.html'
-
-
 const myPresentation = document.createElement("p");
 const wifiConnect = document.createElement("p");
 
@@ -14,10 +11,20 @@ document.body.appendChild(wifiConnect);
 
 const wifi = document.querySelector("img");
 
-wifi.onclick = () => {
-	const src = wifi.getAttribute("src");
-};
+const profile = document.querySelector('.profile');
+profile.style.justifyContent = 'center';
 
-var windows = false;
+document.getElementById('alternarBtn').addEventListener('click', function() {
+	const contenedor = document.getElementById('.container');
+	contenedor.classList.toggle('alternar-vertical');
+	
+	const lateral = document.querySelector('.about');
+	if(contenedor.classList.contains('alternar-vertical')) {
+		lateral.textContent = "Texto abajo";
+	} else {
+		lateral.textContent = "Texto al lado";
+	}
+});
 
-windows.open("https://wwww.google.com")
+
+
