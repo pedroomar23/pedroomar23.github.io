@@ -100,11 +100,11 @@ function login()
 {
     if (login) 
     {
-        console.log(login);
+        loginResponse = true 
     } 
     else 
     {
-        console.log(login)
+        loginResponse = false 
     }
 }
 
