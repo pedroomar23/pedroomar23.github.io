@@ -108,6 +108,33 @@ function login()
     }
 }
 
+const numero = 5;
+const numero1 = 5;
+
+function suma(numero, numero1)  {
+    return numero + numero1
+}
+
+const result = suma(5, 5);
+console.log(result);
+
+function resta(numero, numero1) {
+    return numero - numero1;
+}
+
+console.log(resta(5, 5));
+
+function multiplicacion(numero, numero1) {
+    return numero * numero1;
+}
+
+console.log(multiplicacion(5, 5));
+
+function division(numero, numero1) {
+    return numero / numero1
+}
+
+console.log(division(5, 5));
 
 
 
