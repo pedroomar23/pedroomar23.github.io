@@ -1,14 +1,14 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html class="dark" style="color-scheme: dark" lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
-    <link
-      rel="stylesheet"
-      text="text/css"
-      href="/public/styles/styles.css"
-    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" text="text/css" href="/public/styles/styles.css" />
     <meta name="author" content="Pedro Omar" />
     <meta name="description" content="This is my Portafolio" />
     <meta
@@ -36,8 +36,15 @@
     </style>
   </head>
   <body>
+    <!-- Navigation -->
     <nav class="navigation-bar">
-      <div class="navigation-title">pedroomar23</div>
+      <div
+        class="navigation-title"
+        id="navigation-title"
+        style="align-content: last baseline"
+      >
+        pedroomar23
+      </div>
     </nav>
     <div class="container">
       <div style="padding-top: 50px">
@@ -54,7 +61,7 @@
         <div>
           <a href="https://t.me/pedroomar23">
             <img
-              src="/src/assets/icons/icon-1.png"
+              src="/public/assets/icons/icon-1.png"
               style="width: 5%; height: 5%"
             />
           </a>
@@ -62,57 +69,62 @@
         <div>
           <a href="https://x.com/pedroomar25">
             <img
-              src="/src/assets/icons/icon-1.png"
+              src="/public/assets/icons/icon-2.png"
               style="width: 5%; height: 5%"
             />
           </a>
         </div>
       </div>
     </div>
-   
-    <section class="aboutme" id="aboutme">
-      <header>
-        About Me 
-      </header>
-      <p style="align-content: center; font-size: small;"> 
-        
-      </p>
+
+    <!-- About Me -->
+    <section
+      class="aboutme"
+      id="aboutme"
+      style="align-content: center; font-size: small"
+    >
+      <header>About Me</header>
+      <p style="align-content: center; font-size: small" id="about-me"></p>
     </section>
-   
+
+    <!-- Projects -->
     <section class="projects" id="myProyectos">
       <header>
         <h1>Projects</h1>
       </header>
 
-      <div class="project">
+      <!-- WifiConnect -->
+      <div
+        class="project"
+        style="align-content: center; font-size: small"
+        id="wificonnect"
+      >
         <h3>Wifi Connect</h3>
         <img
-          src="/src/assets/img/projects/photo_2025-03-27 15.15.43.jpeg"
+          src="/public/assets/img/projects/photo_2025-03-27 15.15.43.jpeg"
           alt="https://apps.apple.com/us/app/wifi-connect/id6496852984"
         />
-        <p style="align-content: center; font-size: small">
-          Wifi Connect is an app that helps users to use Etecsa services with
-          security and stability. Also with this app the users gonna save,
-          edits, share the accounts.
-          <br />
-        </p>
+        <p
+          style="align-content: center; font-size: small"
+          id="wifi-connect"
+        ></p>
       </div>
 
-      <div class="project" id="keyWifi">
+      <!-- KeyWifi -->
+      <div
+        class="project"
+        id="keyWifi"
+        style="align-content: center; font-size: small"
+      >
         <h3>KeyWifi</h3>
-        <img src="/src/assets/img/projects/photo_2025-03-27 15.15.50.jpeg" />
-        <p style="align-content: center; font-size: small">
-          KeyWifi is an app that helps users to use Etecsa services, view
-          internet speed, log in to the Nauta portal to check line information,
-          and log in to the Etecsa portal.
-          <br />
-        </p>
+        <img src="/public/assets/img/projects/photo_2025-03-27 15.15.50.jpeg" />
+        <p style="align-content: center; font-size: small" id="key-wifi"></p>
       </div>
     </section>
 
-    <div class="footer">
-      © 2025 Portafolio. Made in Cuba 🇨🇺
-    </div>
-    <script src="/src/utils/main.js"></script>
+    <div class="footer" id="footer">© 2025 Portafolio. Made in Cuba 🇨🇺</div>
+    <script src="/src/scripts/aboutme.js"></script>
+    <script src="/src/scripts/wificonnect.js"></script>
+    <script src="/src/scripts/keywifi.js"></script>
   </body>
 </html>
