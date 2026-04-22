@@ -8,7 +8,7 @@
     <title>Portafolio</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" text="text/css" href="/public/styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/public/styles/styles.css" />
     <meta name="author" content="Pedro Omar" />
     <meta name="description" content="This is my Portafolio" />
     <meta
@@ -36,95 +36,16 @@
     </style>
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navigation-bar">
-      <div
-        class="navigation-title"
-        id="navigation-title"
-        style="align-content: last baseline"
-      >
-        pedroomar23
-      </div>
-    </nav>
-    <div class="container">
-      <div style="padding-top: 50px">
-        <div style="padding: 5%">Pedro Omar</div>
-        <div style="display: flex; padding: 10%">pedroomar23</div>
-      </div>
-      <div class="about">
-        <p style="padding-top: 20px">
-          iOS Developer
-          <br />
-        </p>
-      </div>
-      <div class="redes">
-        <div>
-          <a href="https://t.me/pedroomar23">
-            <img
-              src="/public/assets/icons/icon-1.png"
-              style="width: 5%; height: 5%"
-            />
-          </a>
-        </div>
-        <div>
-          <a href="https://x.com/pedroomar25">
-            <img
-              src="/public/assets/icons/icon-2.png"
-              style="width: 5%; height: 5%"
-            />
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- About Me -->
-    <section
-      class="aboutme"
-      id="aboutme"
-      style="align-content: center; font-size: small"
-    >
-      <header>About Me</header>
-      <p style="align-content: center; font-size: small" id="about-me"></p>
-    </section>
-
-    <!-- Projects -->
-    <section class="projects" id="myProyectos">
-      <header>
-        <h1>Projects</h1>
-      </header>
-
-      <!-- WifiConnect -->
-      <div
-        class="project"
-        style="align-content: center; font-size: small"
-        id="wificonnect"
-      >
-        <h3>Wifi Connect</h3>
-        <img
-          src="/public/assets/img/projects/photo_2025-03-27 15.15.43.jpeg"
-          alt="https://apps.apple.com/us/app/wifi-connect/id6496852984"
-        />
-        <p
-          style="align-content: center; font-size: small"
-          id="wifi-connect"
-        ></p>
-      </div>
-
-      <!-- KeyWifi -->
-      <div
-        class="project"
-        id="keyWifi"
-        style="align-content: center; font-size: small"
-      >
-        <h3>KeyWifi</h3>
-        <img src="/public/assets/img/projects/photo_2025-03-27 15.15.50.jpeg" />
-        <p style="align-content: center; font-size: small" id="key-wifi"></p>
-      </div>
-    </section>
-
-    <div class="footer" id="footer">© 2025 Portafolio. Made in Cuba 🇨🇺</div>
+    <!-- Containers -->
+    <div class="navigation" id="navigation"></div>
+    <div class="about" id="about"></div>
+    <div class="wifihub" id="wifihub"></div>
+    <div class="footer" id="footer"></div>
+    
+    <!-- Scripts -->
     <script src="/src/scripts/aboutme.js"></script>
-    <script src="/src/scripts/wificonnect.js"></script>
-    <script src="/src/scripts/keywifi.js"></script>
+    <script src="/src/scripts/wifihub.js"></script>
+    <script src="/src/scripts/navigation.js"></script>
+    <script src="/src/scripts/footer.js"></script> 
   </body>
 </html>
