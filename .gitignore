@@ -11,3 +11,9 @@
 
 #!.yarn/cache
 .pnp.*
+
+# macOS
+.DS_Store
+
+# Jekyll output
+_site/
