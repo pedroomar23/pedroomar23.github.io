@@ -1,47 +1,61 @@
 // WifiHub Proyect
-document.addEventListener("DOMContentLoaded", function () {
-  const projects = document.getElementById("projects");
+(function () {
+  const LANGUAGE_EVENT = "portfolio:languagechange";
 
-  if (!projects) {
-    console.error("Content Failure", "Missing #projects container");
-    return;
+  function render() {
+    const projects = document.getElementById("projects");
+    const i18n = window.i18n;
+
+    if (!projects) {
+      console.error("Content Failure", "Missing #projects container");
+      return;
+    }
+
+    if (!i18n) {
+      console.error("Content Failure", "Missing i18n helper");
+      return;
+    }
+
+    try {
+      projects.innerHTML = `
+      <section class="projects" aria-labelledby="projects-title">
+        <h2 class="section-title" id="projects-title">${i18n.t(
+          "projects.title"
+        )}</h2>
+        <article class="project">
+          <img
+            class="project-icon"
+            src="/public/assets/img/apps/icon-wifi-connet-dark.jpg"
+            alt="${i18n.t("projects.iconAlt")}"
+            loading="lazy"
+          />
+          <div class="project-content">
+            <h1 class="project-title">${i18n.t("projects.name")}</h1>
+            <h2 class="project-description">${i18n.t(
+              "projects.description"
+            )}</h2>
+          </div>
+          <div class="project-actions">
+            <a
+              class="button button--primary"
+              href="https://apps.apple.com/us/app/wifihub/id6759055211"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ${i18n.t("projects.appStore")}
+            </a>
+            <a class="button button--secondary" href="/policy.html">
+              ${i18n.t("projects.privacy")}
+            </a>
+          </div>
+        </article>
+      </section>
+      `;
+    } catch (error) {
+      console.error("Content Failure", error);
+    }
   }
 
-  try {
-    projects.innerHTML = `
-    <section class="projects" aria-labelledby="projects-title">
-      <h2 class="section-title" id="projects-title">Proyectos</h2>
-      <article class="project">
-        <img
-          class="project-icon"
-          src="/public/assets/img/apps/icon-wifi-connet-dark.jpg"
-          alt="Icono de la app WifiHub"
-          loading="lazy"
-        />
-        <div class="project-content">
-          <h1 class="project-title">WifiHub</h1>
-          <h2 class="project-description">
-            WifiHub es un proyecto que ayuda a los usuarios de iOS a guardar sus
-            cuentas de forma segura para luego usarlas sin problemas.
-          </h2>
-        </div>
-        <div class="project-actions">
-          <a
-            class="button button--primary"
-            href="https://apps.apple.com/us/app/wifihub/id6759055211"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver en App Store
-          </a>
-          <a class="button button--secondary" href="/policy.html">
-            Política de Privacidad
-          </a>
-        </div>
-      </article>
-    </section>
-    `;
-  } catch (error) {
-    console.error("Content Failure", error);
-  }
-});
+  document.addEventListener("DOMContentLoaded", render);
+  document.addEventListener(LANGUAGE_EVENT, render);
+})();

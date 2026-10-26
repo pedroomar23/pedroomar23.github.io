@@ -1,69 +1,53 @@
 // Privacy Policy
-document.addEventListener("DOMContentLoaded", function () {
-  const policy = document.getElementById("policy");
+(function () {
+  const LANGUAGE_EVENT = "portfolio:languagechange";
 
-  if (!policy) {
-    console.error("Content Failure", "Missing #policy container");
-    return;
+  function renderSections(sections) {
+    return sections
+      .map(function (section) {
+        const items = section.items
+          .map(function (item) {
+            return `<li>${item}</li>`;
+          })
+          .join("");
+
+        const list = section.intro
+          ? `<li>${section.intro}<ul>${items}</ul></li>`
+          : items;
+
+        return `<h2>${section.heading}</h2><ul>${list}</ul>`;
+      })
+      .join("");
   }
 
-  try {
-    policy.innerHTML = `
-    <section class="policy" aria-labelledby="policy-title" lang="en">
-      <p class="policy-eyebrow">WifiHub</p>
-      <h1 id="policy-title">Privacy Policy</h1>
+  function render() {
+    const policy = document.getElementById("policy");
+    const i18n = window.i18n;
 
-      <h2>Information collected</h2>
-      <ul>
-        <li>
-          The application collects the following information:
-          <ul>
-            <li>Username (optional)</li>
-            <li>Email address (optional)</li>
-            <li>WiFi connection information (SSID, password, etc.)</li>
-          </ul>
-        </li>
-      </ul>
+    if (!policy) {
+      console.error("Content Failure", "Missing #policy container");
+      return;
+    }
 
-      <h2>Use of information</h2>
-      <ul>
-        <li>
-          We use the information collected to:
-          <ul>
-            <li>Facilitate the connection to WiFi networks.</li>
-            <li>Send relevant updates and notifications.</li>
-            <li>Improve the application and its functions.</li>
-          </ul>
-        </li>
-      </ul>
+    if (!i18n) {
+      console.error("Content Failure", "Missing i18n helper");
+      return;
+    }
 
-      <h2>Share information</h2>
-      <ul>
-        <li>
-          We do not share personal information with third parties without your
-          consent.
-        </li>
-        <li>WiFi connection information is stored locally on your device.</li>
-      </ul>
-
-      <h2>Security</h2>
-      <ul>
-        <li>We take measures to protect the user's information.</li>
-        <li>We do not store WiFi network passwords on our servers.</li>
-      </ul>
-
-      <h2>Changes in politics</h2>
-      <ul>
-        <li>
-          This policy may be updated from time to time. Check the latest version
-          on our website.
-        </li>
-      </ul>
-
-      <a class="policy-back" href="/" lang="es">← Volver al portafolio</a>
-    </section>
-    `;
-  } catch (error) {
-    console.error("Content Failure", error);
+    try {
+      policy.innerHTML = `
+      <section class="policy" aria-labelledby="policy-title">
+        <p class="policy-eyebrow">${i18n.t("policy.eyebrow")}</p>
+        <h1 id="policy-title">${i18n.t("policy.title")}</h1>
+        ${renderSections(i18n.t("policy.sections"))}
+        <a class="policy-back" href="/">${i18n.t("policy.back")}</a>
+      </section>
+      `;
+    } catch (error) {
+      console.error("Content Failure", error);
+    }
   }
-});
+
+  document.addEventListener("DOMContentLoaded", render);
+  document.addEventListener(LANGUAGE_EVENT, render);
+})();

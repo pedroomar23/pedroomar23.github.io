@@ -1,24 +1,33 @@
 // About Me
-document.addEventListener("DOMContentLoaded", function () {
-  const about = document.getElementById("about");
+(function () {
+  const LANGUAGE_EVENT = "portfolio:languagechange";
 
-  if (!about) {
-    console.error("Content Failure", "Missing #about container");
-    return;
+  function render() {
+    const about = document.getElementById("about");
+    const i18n = window.i18n;
+
+    if (!about) {
+      console.error("Content Failure", "Missing #about container");
+      return;
+    }
+
+    if (!i18n) {
+      console.error("Content Failure", "Missing i18n helper");
+      return;
+    }
+
+    try {
+      about.innerHTML = `
+      <section class="about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title">${i18n.t("about.title")}</h2>
+        <p>${i18n.t("about.body")}</p>
+      </section>
+      `;
+    } catch (error) {
+      console.error("Content Failure", error);
+    }
   }
 
-  try {
-    about.innerHTML = `
-    <section class="about" aria-labelledby="about-title">
-      <h2 class="section-title" id="about-title">About Me</h2>
-      <p>
-        Hola soy Pedro Omar. Actualmente estoy trabajando como Desarrollador
-        Móvil con experiencia de 3 años con Swift, SwiftUI, UIKit y además tengo
-        conocimientos de Java, HTML, CSS, JavaScript, Python.
-      </p>
-    </section>
-    `;
-  } catch (error) {
-    console.error("Content Failure", error);
-  }
-});
+  document.addEventListener("DOMContentLoaded", render);
+  document.addEventListener(LANGUAGE_EVENT, render);
+})();
