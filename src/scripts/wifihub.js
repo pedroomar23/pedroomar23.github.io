@@ -25,6 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
             cuentas de forma segura para luego usarlas sin problemas.
           </h2>
         </div>
+        <div class="project-actions">
+          <a
+            class="button button--primary"
+            href="https://apps.apple.com/us/app/wifihub/id6759055211"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver en App Store
+          </a>
+          <a class="button button--secondary" href="/policy.html">
+            Política de Privacidad
+          </a>
+        </div>
       </article>
     </section>
     `;

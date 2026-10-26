@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
           </div>
           <nav class="nav-links" aria-label="Navegación principal">
-            <a href="#about">About Me</a>
-            <a href="#projects">Proyectos</a>
+            <a href="/#about">About Me</a>
+            <a href="/#projects">Proyectos</a>
           </nav>
         </div>
       </header>
