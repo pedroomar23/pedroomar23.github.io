@@ -24,6 +24,35 @@
         <p class="project-stack">
           <span class="project-dot" aria-hidden="true"></span>Swift
         </p>
+        <div class="project-gallery">
+          <figure class="project-shot">
+            <img
+              src="/public/assets/img/wifihub-accounts.png"
+              alt="${i18n.t("projectPage.shots.0")}"
+              width="1206"
+              height="2622"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="project-shot">
+            <img
+              src="/public/assets/img/wifihub-add-account.png"
+              alt="${i18n.t("projectPage.shots.1")}"
+              width="1206"
+              height="2622"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="project-shot">
+            <img
+              src="/public/assets/img/wifihub-settings.png"
+              alt="${i18n.t("projectPage.shots.2")}"
+              width="1206"
+              height="2622"
+              loading="lazy"
+            />
+          </figure>
+        </div>
         <p class="project-detail-description">${i18n.t(
           "projectPage.description"
         )}</p>

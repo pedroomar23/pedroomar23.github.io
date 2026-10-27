@@ -402,6 +402,58 @@ a {
     margin-bottom: 20px;
 }
 
+.project-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 0 0 30px;
+}
+
+.project-shot {
+    margin: 0;
+    flex: 0 1 200px;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: var(--surface-color);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-shot:nth-child(1) {
+    border-radius: 26px;
+    transform: rotate(-4deg) translateY(10px);
+}
+
+.project-shot:nth-child(2) {
+    flex-basis: 230px;
+    border-radius: 36px;
+    border-color: rgba(124, 108, 255, 0.45);
+    box-shadow: 0 22px 45px rgba(124, 108, 255, 0.22),
+        0 18px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-6px);
+}
+
+.project-shot:nth-child(3) {
+    border-radius: 18px;
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: rotate(4deg) translateY(10px);
+}
+
+.project-shot:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+    transform: translateY(-8px) rotate(0deg);
+}
+
 .project-detail-description {
     margin: 0;
     color: var(--muted-color);
@@ -608,6 +660,39 @@ a {
 
     .project-detail {
         padding: 20px;
+    }
+
+    .project-gallery {
+        justify-content: flex-start;
+        gap: 14px;
+        padding: 16px 4px 34px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .project-gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-shot {
+        flex: 0 0 62%;
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.45);
+        scroll-snap-align: center;
+    }
+
+    .project-shot:nth-child(1) {
+        transform: rotate(-2deg) translateY(6px);
+    }
+
+    .project-shot:nth-child(2) {
+        flex-basis: 62%;
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgba(124, 108, 255, 0.22);
+    }
+
+    .project-shot:nth-child(3) {
+        transform: rotate(2deg) translateY(6px);
     }
 
     .project-detail-actions {

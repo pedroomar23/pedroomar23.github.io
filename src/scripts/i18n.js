@@ -49,6 +49,11 @@
         eyebrow: "Proyecto",
         description:
           "WifiHub es un proyecto que ayuda a los usuarios de iOS a guardar sus cuentas de forma segura para luego usarlas sin problemas.",
+        shots: [
+          "Captura de la lista de cuentas guardadas en WifiHub",
+          "Captura del formulario para añadir una cuenta en WifiHub",
+          "Captura de los ajustes de seguridad de WifiHub",
+        ],
         back: "← Volver a proyectos",
       },
       footer: {
@@ -144,6 +149,11 @@
         eyebrow: "Project",
         description:
           "WifiHub is a project that helps iOS users store their accounts securely so they can use them without any hassle.",
+        shots: [
+          "Screenshot of the saved accounts list in WifiHub",
+          "Screenshot of the add account form in WifiHub",
+          "Screenshot of the WifiHub security settings",
+        ],
         back: "← Back to projects",
       },
       footer: {
