@@ -36,6 +36,29 @@
                   ${i18n.t("projects.name")}
                 </a>
               </h1>
+              <div class="project-socials">
+                <a
+                  class="project-social"
+                  href="https://x.com/wifihub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X"
+                >
+                  <img src="/public/assets/icons/icon-2.png" alt="X" />
+                </a>
+                <a
+                  class="project-social"
+                  href="https://t.me/pedroomar23"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Telegram"
+                >
+                  <img
+                    src="/public/assets/icons/icon-1.png"
+                    alt="Telegram"
+                  />
+                </a>
+              </div>
             </div>
             <div class="project-actions">
               <a
