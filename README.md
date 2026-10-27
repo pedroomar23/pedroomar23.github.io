@@ -11,11 +11,13 @@ sección se inyecta desde un script con `innerHTML` al dispararse `DOMContentLoa
 ```
 index.html                  Contenedores y carga de scripts
 policy.html                 Página independiente de la política de privacidad
+wifihubproject.html         Página de detalle del proyecto WifiHub
 public/styles/styles.css    Tema, layout y responsive
 src/scripts/i18n.js         Traducciones ES/EN y selector de idioma
 src/scripts/navigation.js   Header con foto, nombre y enlaces
 src/scripts/aboutme.js      Sección About Me
 src/scripts/wifihub.js      Sección Proyectos (WifiHub)
+src/scripts/wifihubproject.js  Detalle del proyecto WifiHub
 src/scripts/policy.js       Contenido de la política de privacidad
 src/scripts/footer.js       Redes sociales y texto del pie
 public/assets/              Iconos, foto de perfil e imágenes

@@ -30,10 +30,14 @@
             loading="lazy"
           />
           <div class="project-content">
-            <h1 class="project-title">${i18n.t("projects.name")}</h1>
-            <h2 class="project-description">${i18n.t(
-              "projects.description"
-            )}</h2>
+            <h1 class="project-title">
+              <a class="project-title-link" href="/wifihubproject.html">
+                ${i18n.t("projects.name")}
+              </a>
+            </h1>
+            <p class="project-stack">
+              <span class="project-dot" aria-hidden="true"></span>Swift
+            </p>
           </div>
           <div class="project-actions">
             <a

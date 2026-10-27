@@ -18,6 +18,11 @@
           description:
             "Política de privacidad de WifiHub, la app para iOS que ayuda a los usuarios a guardar sus cuentas WiFi de forma segura.",
         },
+        project: {
+          title: "WifiHub — Pedro Omar",
+          description:
+            "WifiHub es un proyecto que ayuda a los usuarios de iOS a guardar sus cuentas de forma segura para luego usarlas sin problemas.",
+        },
       },
       nav: {
         ariaLabel: "Navegación principal",
@@ -35,10 +40,14 @@
         title: "Proyectos",
         iconAlt: "Icono de la app WifiHub",
         name: "WifiHub",
-        description:
-          "WifiHub es un proyecto que ayuda a los usuarios de iOS a guardar sus cuentas de forma segura para luego usarlas sin problemas.",
         appStore: "Ver en App Store",
         privacy: "Política de Privacidad",
+      },
+      projectPage: {
+        eyebrow: "Proyecto",
+        description:
+          "WifiHub es un proyecto que ayuda a los usuarios de iOS a guardar sus cuentas de forma segura para luego usarlas sin problemas.",
+        back: "← Volver a proyectos",
       },
       footer: {
         ariaLabel: "Redes sociales",
@@ -102,6 +111,11 @@
           description:
             "Privacy Policy for WifiHub, the iOS app that helps users store their WiFi accounts securely.",
         },
+        project: {
+          title: "WifiHub — Pedro Omar",
+          description:
+            "WifiHub is a project that helps iOS users store their accounts securely so they can use them without any hassle.",
+        },
       },
       nav: {
         ariaLabel: "Main navigation",
@@ -119,10 +133,14 @@
         title: "Projects",
         iconAlt: "WifiHub app icon",
         name: "WifiHub",
-        description:
-          "WifiHub is a project that helps iOS users store their accounts securely so they can use them without any hassle.",
         appStore: "View on the App Store",
         privacy: "Privacy Policy",
+      },
+      projectPage: {
+        eyebrow: "Project",
+        description:
+          "WifiHub is a project that helps iOS users store their accounts securely so they can use them without any hassle.",
+        back: "← Back to projects",
       },
       footer: {
         ariaLabel: "Social links",
@@ -225,8 +243,11 @@
       return;
     }
 
+    const attribute = document.body.getAttribute("data-page");
     const page =
-      document.body.getAttribute("data-page") === "policy" ? "policy" : "home";
+      ["home", "policy", "project"].indexOf(attribute) !== -1
+        ? attribute
+        : "home";
     const meta = dictionary.meta[page];
 
     document.title = meta.title;
