@@ -8,7 +8,6 @@
     --muted-color: #9b9bb2;
     --radius: 16px;
 }
-
 * {
     box-sizing: border-box;
 }
@@ -48,6 +47,11 @@ a {
 /* Header / Profile */
 .site-header {
     position: sticky;
+}
+
+.navigation
+{
+    position: fixed;
     top: 0;
     z-index: 100;
     background-color: rgba(10, 10, 18, 0.85);
@@ -90,7 +94,6 @@ a {
     font-weight: 700;
     letter-spacing: 0.5px;
     color: #ffffff;
-    object-fit: cover;
     user-select: none;
 }
 
@@ -110,14 +113,6 @@ a {
     margin: 0;
     font-size: 0.85rem;
     color: var(--muted-color);
-}
-
-.site-header-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    max-width: 100%;
 }
 
 .nav-links {
@@ -142,43 +137,6 @@ a {
     color: var(--text-color);
     border-color: var(--primary-color);
     background-color: rgba(124, 108, 255, 0.12);
-}
-
-.lang-switch {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    padding: 3px;
-    border: 1px solid var(--border-color);
-    border-radius: 999px;
-    background-color: var(--surface-color);
-}
-
-.lang-switch__btn {
-    padding: 4px 11px;
-    border: 0;
-    border-radius: 999px;
-    background-color: transparent;
-    color: var(--muted-color);
-    font: inherit;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    transition: color 0.15s ease, background-color 0.15s ease;
-}
-
-.lang-switch__btn:hover {
-    color: var(--text-color);
-}
-
-.lang-switch__btn[aria-pressed="true"] {
-    background-image: linear-gradient(
-        135deg,
-        var(--primary-color),
-        var(--accent-color)
-    );
-    color: #ffffff;
 }
 
 /* Sections */
@@ -233,115 +191,6 @@ a {
     font-weight: 400;
     line-height: 1.6;
     color: var(--muted-color);
-}
-
-.project-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    margin-left: auto;
-    flex-shrink: 0;
-}
-
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 9px 16px;
-    border: 1px solid transparent;
-    border-radius: 999px;
-    font-size: 0.8125rem;
-    font-weight: 600;
-    line-height: 1.2;
-    white-space: nowrap;
-    transition: filter 0.15s ease, color 0.15s ease,
-        border-color 0.15s ease, background-color 0.15s ease;
-}
-
-.button--primary {
-    background-image: linear-gradient(
-        135deg,
-        var(--primary-color),
-        var(--accent-color)
-    );
-    color: #ffffff;
-}
-
-.button--primary:hover,
-.button--primary:focus-visible {
-    filter: brightness(1.1);
-}
-
-.button--secondary {
-    border-color: var(--border-color);
-    background-color: transparent;
-    color: var(--muted-color);
-}
-
-.button--secondary:hover,
-.button--secondary:focus-visible {
-    border-color: var(--primary-color);
-    background-color: rgba(124, 108, 255, 0.12);
-    color: var(--text-color);
-}
-
-/* Privacy policy */
-.policy {
-    padding: 28px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    background-color: var(--surface-color);
-}
-
-.policy-eyebrow {
-    margin: 0 0 4px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted-color);
-}
-
-.policy h1 {
-    margin: 0 0 24px;
-    font-size: 1.6rem;
-    font-weight: 700;
-}
-
-.policy h2 {
-    margin: 24px 0 8px;
-    font-size: 1.05rem;
-    font-weight: 700;
-}
-
-.policy ul {
-    margin: 0;
-    padding-left: 20px;
-    color: var(--muted-color);
-}
-
-.policy li {
-    margin-bottom: 6px;
-}
-
-.policy li > ul {
-    margin-top: 6px;
-}
-
-.policy-back {
-    display: inline-block;
-    margin-top: 28px;
-    padding-bottom: 2px;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 0.875rem;
-    color: var(--muted-color);
-}
-
-.policy-back:hover,
-.policy-back:focus-visible {
-    border-color: var(--primary-color);
-    color: var(--text-color);
 }
 
 /* Footer */
@@ -409,30 +258,33 @@ a {
         justify-content: center;
     }
 
-    .site-header-actions {
-        width: 100%;
-        justify-content: center;
-    }
-
     .about,
     .projects {
         padding: 20px;
-    }
-
-    .project {
-        flex-direction: column;
-    }
-
-    .project-actions {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .project-title {
-        font-size: 1.4rem;
-    }
-
-    .policy {
-        padding: 20px;
+        justify-content: leading;
+         z-index: 100;
+        height: 40px;
+        background-color: black;
     }
 }
+
+.about
+{
+    padding: 15px;
+    align-self: center;
+}
+
+.wifihub {
+    margin: 10% 10% 10%;
+    margin: 10mm 10mm 10mm;
+    font-size: small;
+}
+
+.project {
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.4rem;
+}
+
