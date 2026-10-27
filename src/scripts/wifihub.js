@@ -36,6 +36,7 @@
                   ${i18n.t("projects.name")}
                 </a>
               </h1>
+              <p class="project-summary">${i18n.t("projects.summary")}</p>
               <div class="project-socials">
                 <a
                   class="project-social"

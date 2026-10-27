@@ -29,8 +29,8 @@
         about: "Sobre mí",
         projects: "Proyectos",
         language: "Idioma",
-        spanish: "Español",
-        english: "English",
+        spanish: "Español (ES)",
+        english: "English (EN)",
       },
       about: {
         title: "Sobre mí",
@@ -40,6 +40,8 @@
         title: "Proyectos",
         iconAlt: "Icono de la app WifiHub",
         name: "WifiHub",
+        summary:
+          "WifiHub es un proyecto para usuarios de iOS que los ayuda a guardar sus cuentas de forma segura y rápida.",
         appStore: "Ver en App Store",
         privacy: "Política de Privacidad",
       },
@@ -122,8 +124,8 @@
         about: "About Me",
         projects: "Projects",
         language: "Language",
-        spanish: "Spanish",
-        english: "English",
+        spanish: "Spanish (ES)",
+        english: "English (EN)",
       },
       about: {
         title: "About Me",
@@ -133,6 +135,8 @@
         title: "Projects",
         iconAlt: "WifiHub app icon",
         name: "WifiHub",
+        summary:
+          "WifiHub is a project for iOS users that helps them save their accounts quickly and securely.",
         appStore: "View on the App Store",
         privacy: "Privacy Policy",
       },
