@@ -23,21 +23,23 @@
           "projects.title"
         )}</h2>
         <article class="project">
-          <img
-            class="project-icon"
-            src="/public/assets/img/apps/icon-wifi-connet-dark.jpg"
-            alt="${i18n.t("projects.iconAlt")}"
-            loading="lazy"
-          />
+          <div class="project-media">
+            <img
+              class="project-icon"
+              src="/public/assets/img/apps/icon-wifi-connet-dark.jpg"
+              alt="${i18n.t("projects.iconAlt")}"
+              loading="lazy"
+            />
+            <p class="project-stack">
+              <span class="project-dot" aria-hidden="true"></span>Swift
+            </p>
+          </div>
           <div class="project-content">
             <h1 class="project-title">
               <a class="project-title-link" href="/wifihubproject.html">
                 ${i18n.t("projects.name")}
               </a>
             </h1>
-            <p class="project-stack">
-              <span class="project-dot" aria-hidden="true"></span>Swift
-            </p>
           </div>
           <div class="project-actions">
             <a
