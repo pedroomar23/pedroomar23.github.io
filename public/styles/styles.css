@@ -217,20 +217,28 @@ a {
     object-fit: cover;
 }
 
-.project-media {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
+.projects {
+    position: relative;
+    padding-bottom: 64px;
+}
+
+.projects > .project-stack {
+    position: absolute;
+    left: 28px;
+    bottom: 20px;
 }
 
 .project-content {
+    flex: 1;
     min-width: 0;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-title {
-    margin: 0 0 8px;
+    margin: 0;
     font-size: 1.6rem;
     font-weight: 700;
 }
@@ -499,6 +507,15 @@ a {
     .about,
     .projects {
         padding: 20px;
+    }
+
+    .projects {
+        padding-bottom: 54px;
+    }
+
+    .projects > .project-stack {
+        left: 20px;
+        bottom: 16px;
     }
 
     .project {

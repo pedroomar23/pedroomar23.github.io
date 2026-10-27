@@ -18,43 +18,43 @@
 
     try {
       projects.innerHTML = `
-      <section class="projects" aria-labelledby="projects-title">
+      <section class="projects-section" aria-labelledby="projects-title">
         <h2 class="section-title" id="projects-title">${i18n.t(
           "projects.title"
         )}</h2>
-        <article class="project">
-          <div class="project-media">
+        <div class="projects">
+          <article class="project">
             <img
               class="project-icon"
               src="/public/assets/img/apps/icon-wifi-connet-dark.jpg"
               alt="${i18n.t("projects.iconAlt")}"
               loading="lazy"
             />
-            <p class="project-stack">
-              <span class="project-dot" aria-hidden="true"></span>Swift
-            </p>
-          </div>
-          <div class="project-content">
-            <h1 class="project-title">
-              <a class="project-title-link" href="/wifihubproject.html">
-                ${i18n.t("projects.name")}
+            <div class="project-content">
+              <h1 class="project-title">
+                <a class="project-title-link" href="/wifihubproject.html">
+                  ${i18n.t("projects.name")}
+                </a>
+              </h1>
+            </div>
+            <div class="project-actions">
+              <a
+                class="button button--primary"
+                href="https://apps.apple.com/us/app/wifihub/id6759055211"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ${i18n.t("projects.appStore")}
               </a>
-            </h1>
-          </div>
-          <div class="project-actions">
-            <a
-              class="button button--primary"
-              href="https://apps.apple.com/us/app/wifihub/id6759055211"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ${i18n.t("projects.appStore")}
-            </a>
-            <a class="button button--secondary" href="/policy.html">
-              ${i18n.t("projects.privacy")}
-            </a>
-          </div>
-        </article>
+              <a class="button button--secondary" href="/policy.html">
+                ${i18n.t("projects.privacy")}
+              </a>
+            </div>
+          </article>
+          <p class="project-stack">
+            <span class="project-dot" aria-hidden="true"></span>Swift
+          </p>
+        </div>
       </section>
       `;
     } catch (error) {
